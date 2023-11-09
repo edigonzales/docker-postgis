@@ -1,11 +1,11 @@
 # docker-postgis
 
-PostGIS-Dockerimage mit ogr foreign data wrapper für lokale Entwicklungen. 
+PostGIS-Dockerimage mit ogr foreign data wrapper für lokale Entwicklungen. Für GRETL- und Schema-Jobs nicht zu verwenden!
 
 ## Build
 
 ```
-docker build -t sogis/postgis: 16-3.4
+docker build -t sogis/postgis:16-3.4
 ```
 
 ## Run
