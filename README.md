@@ -1,6 +1,6 @@
 # docker-postgis
 
-PostGIS-Dockerimage mit ogr foreign data wrapper für lokale Entwicklungen. Für GRETL- und Schema-Jobs nicht zu verwenden!
+PostGIS-Dockerimage mit [ogr foreign data wrapper](https://github.com/pramsey/pgsql-ogr-fdw) für lokale Entwicklungen. Für GRETL- und Schema-Jobs nicht zu verwenden!
 
 ## Build
 
