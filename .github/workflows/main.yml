@@ -19,8 +19,14 @@ jobs:
         postgres: [16]
         postgis: ['3.4']
         latest: [false]
+
     name: Build docker image for ${{ matrix.postgres }}-${{ matrix.postgis }}
     runs-on: ubuntu-22.04
+
+    permissions:
+      contents: read
+      packages: write
+
     env:
       VERSION: ${{ matrix.postgres }}-${{ matrix.postgis }}
 
