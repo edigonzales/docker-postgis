@@ -5,7 +5,7 @@ PostGIS-Dockerimage mit [ogr foreign data wrapper](https://github.com/pramsey/pg
 ## Build
 
 ```
-docker build -t sogis/postgis:16-3.4
+docker build -t sogis/postgis:16-3.4 .
 ```
 
 ## Run
