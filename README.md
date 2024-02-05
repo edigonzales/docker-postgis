@@ -1,6 +1,6 @@
 # docker-postgis
 
-PostGIS-Dockerimage mit [ogr foreign data wrapper](https://github.com/pramsey/pgsql-ogr-fdw) für lokale Entwicklungen. Für GRETL- und Schema-Jobs nicht zu verwenden!
+PostGIS-Images für verschiedene Zwecke. Das Debian-Image beinhaltet [ogr foreign data wrapper](https://github.com/pramsey/pgsql-ogr-fdw). Urzwecke: Support für ARM64-Prozessoren.
 
 ## Build
 
@@ -17,3 +17,5 @@ docker run --rm --name editdb -p 54321:5432 -e POSTGRES_PASSWORD=secret -e POSTG
 ```
 docker run --rm --name editdb -p 54321:5432 -v pgdata:/var/lib/postgresql/data:delegated -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=edit sogis/postgis:16-3.4
 ```
+
+Analog für das Alpine-Image.
