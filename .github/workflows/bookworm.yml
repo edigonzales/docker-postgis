@@ -3,6 +3,9 @@ name: Docker PostGIS CI - Bookworm
 on:
   workflow_dispatch:
   pull_request:
+    paths:
+      - '*-bookworm/**'
+      - '!**.md'
   push:
     paths:
       - '*-bookworm/**'

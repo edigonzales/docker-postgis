@@ -3,6 +3,9 @@ name: Docker PostGIS CI
 on:
   workflow_dispatch:
   pull_request:
+    paths-ignore:
+      - '**.md'
+      - '*-bookworm/**'
   push:
     paths-ignore:
       - '**.md'
