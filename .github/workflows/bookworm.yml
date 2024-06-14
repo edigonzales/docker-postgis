@@ -47,7 +47,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4.3.0
         with:
-          images: sogis/postgis
+          images: ${{ github.repository_owner }}/postgis
           labels: |
             org.opencontainers.image.title=postgis
             org.opencontainers.image.version=${{ env.VERSION }}
@@ -78,8 +78,8 @@ jobs:
           context: ${{ env.VERSION }}
           file:  ${{ env.VERSION }}/Dockerfile
           tags: |
-            sogis/postgis:${{ env.VERSION }}
-            ghcr.io/sogis/postgis:${{ env.VERSION }}
+            ${{ github.repository_owner }}/postgis:${{ env.VERSION }}
+            ghcr.io/${{ github.repository_owner }}/postgis:${{ env.VERSION }}
           labels: |
             org.opencontainers.image.title=postgis
             org.opencontainers.image.version=${{ env.VERSION }}
