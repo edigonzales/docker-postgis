@@ -1,12 +1,12 @@
-name: Docker PostGIS CI
+name: Docker PostGIS Bookworm CI
 
 on:
   workflow_dispatch:
   pull_request:
   push:
-    paths-ignore:
-      - '**.md'
+    paths:
       - '*-bookworm/**'
+      - '!**.md'
 
 defaults:
   run:
@@ -17,11 +17,12 @@ jobs:
   make-docker-images:
     strategy:
       matrix:
-        postgres: [16]
+        postgres: ['16']
         postgis: ['3.4']
+        variant: [bookworm]
         latest: [false]
 
-    name: Build docker image for ${{ matrix.postgres }}-${{ matrix.postgis }}
+    name: Build docker image for ${{ matrix.postgres }}-${{ matrix.postgis }}-${{ matrix.variant }}
     runs-on: ubuntu-22.04
 
     permissions:
@@ -29,7 +30,7 @@ jobs:
       packages: write
 
     env:
-      VERSION: ${{ matrix.postgres }}-${{ matrix.postgis }}
+      VERSION: ${{ matrix.postgres }}-${{ matrix.postgis }}-${{ matrix.variant }}
 
     steps:
       - uses: actions/checkout@v3
