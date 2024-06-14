@@ -1,4 +1,4 @@
-name: Docker PostGIS Bookworm CI
+name: Docker PostGIS CI - Bookworm
 
 on:
   workflow_dispatch:
